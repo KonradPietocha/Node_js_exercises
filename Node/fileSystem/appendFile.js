@@ -1,6 +1,7 @@
-var fs = require("fs");
+const fs = require("fs");
 
-fs.appendFile("textFile.txt", "Some sample text", function (err) {
+let object = JSON.stringify({name: "Jan", surname: "Kowalski"});
+fs.appendFile("textFile.txt", object, function (err) {
     if (err) throw err;
-    console.log("Saved");
+    console.log("saved");
 });
